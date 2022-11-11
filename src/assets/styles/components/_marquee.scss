@@ -1,0 +1,30 @@
+@import "../imports.scss";
+.marquee-container {
+  padding-top: 1.6rem;
+  padding-bottom: 2.2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  border-top: 1px solid $color-purple-dark;
+  border-bottom: 1px solid $color-purple-dark;
+}
+
+.marquee {
+  display: inline-block;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 56px;
+  color: $color-purple-text;
+  text-transform: uppercase;
+  padding-left: -100%;
+  -webkit-animation: scroll 15s infinite linear;
+  -moz-animation: scroll 15s infinite linear;
+  animation: scroll 15s infinite linear;
+  &::after {
+      content: "Получить скидку 10% >>> Получить скидку 10% >>> ";
+  }
+}

@@ -1,0 +1,39 @@
+@keyframes move_wave_descr {
+  0% {
+      transform: scaleX(1.1);
+      transform: scaleY(1);
+  }
+  50% {
+    transform: scaleX(1.2);
+    transform: scaleY(1.1);
+  }
+  75% {
+    transform: scaleY(1.1);
+    transform: scaleX(1.1);
+  }
+  100% {
+      transform: scaleX(1.1);
+      transform: scaleY(1);
+  }
+}
+
+
+@keyframes move {
+  0% {
+    transform: scaleX(2);
+    transform: scaleY(1);
+
+}
+50% {
+  transform: scaleX(2.5);
+  transform: scaleY(1.2);
+}
+75% {
+  transform: scaleX(2.3);
+  transform: scaleY(1.1);
+}
+100% {
+    transform: scaleX(2);
+    transform: scaleY(1);
+}
+}

@@ -1,0 +1,106 @@
+@import "../abstracts/_vars.scss";
+@import "../abstracts/_mixins.scss";
+.header {
+  position: relative;
+  padding-top: 2.5rem;
+  padding-bottom: 5.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 1000;
+}
+.header__logo {
+  position: relative;
+  width: 20.3rem;
+  min-height: 3.9rem;
+  background-image: url("../images/Frame.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.icon-dash {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  gap: 4.7rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 5rem;
+}
+.icon-dash__search-icon {
+  border: none;
+  background-color: inherit;
+  height: 4.8rem;
+  width: 4.7rem;
+  background-image: url("../images/search.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+.icon-dash__map-icon {
+  border: none;
+  background-color: inherit;
+  height: 4.8rem;
+  width: 4.1rem;
+  background-image: url("../images/map.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.burger__icon {
+  width: 6.7rem;
+  height: 40.67px;
+  cursor: pointer;
+}
+.burger,
+.burger_pseudo {
+  background-color: inherit;
+  height: 1.35rem;
+  width: 6.7rem;
+  background-image: url("../images/burger.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+.burger_pseudo {
+  display: none;
+}
+.burger::after {
+  position: absolute;
+  content: "";
+  border: none;
+  background-color: inherit;
+  height: 1.35rem;
+  width: 6.7rem;
+  background-image: url("../images/burger.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 15px;
+  left: 0;
+}
+.burger::before {
+  position: absolute;
+  content: "";
+  border: none;
+  background-color: inherit;
+  height: 1.35rem;
+  width: 6.7rem;
+  background-image: url("../images/burger.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: -15px;
+  left: 0;
+}

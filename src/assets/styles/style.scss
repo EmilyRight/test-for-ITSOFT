@@ -1,0 +1,44 @@
+@import "./abstracts/_vars";
+@import "./abstracts/_mixins";
+@import "./fonts/fonts.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  background-color: #e5e5e5;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: none;
+  border: none;
+}
+
+.inner-container {
+  padding-left: 10.416666667%;
+  padding-right: 10.416666667%;
+}
+
+
+
+
+@import "./components/header";
+@import "./components/_nav";
+@import "./components/description";
+@import "./components/marquee";
+@import "./components/advantages";
+@import "./components/effects";

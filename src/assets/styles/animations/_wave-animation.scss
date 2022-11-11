@@ -1,0 +1,33 @@
+@keyframes move_wave {
+  0% {
+      transform: scaleY(1)
+  }
+  50% {
+      transform: scaleY(0.55)
+  }
+  100% {
+      transform: scaleY(1)
+  }
+}
+
+// @keyframes move_wave {
+//     0% {
+//         transform: translateX(0) translateZ(0) scaleY(1)
+//     }
+//     50% {
+//         transform: translateX(-25%) translateZ(0) scaleY(0.55)
+//     }
+//     100% {
+//         transform: translateX(-50%) translateZ(0) scaleY(1)
+//     }
+//   }
+
+@keyframes move {
+    from {
+      transform: translate(-90px, 0%);
+    }
+
+    to {
+      transform: translate(90px, 0%);
+    }
+  }

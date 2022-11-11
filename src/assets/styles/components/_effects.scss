@@ -1,0 +1,206 @@
+@import "../imports.scss";
+.effects {
+  padding-top: 2rem;
+  padding-bottom: 3.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 6.5rem;
+}
+.effects__description_main {
+  max-width: 20%;
+}
+.effects__title {
+  @include h2-title;
+
+  padding-bottom: 3.1rem;
+}
+.effects__text {
+  @include section-text($color-grey-dark);
+}
+
+.effects-container {
+  width: 100%;
+  border-top: 1px solid $color-purple-dark;
+}
+.effects__item {
+  padding-top: 2.1rem;
+  padding-bottom: 3.4rem;
+  width: 100%;
+  border-bottom: 1px solid $color-purple-dark;
+  display: flex;
+  justify-content: start;
+  gap: 20%;
+  position: relative;
+}
+.effects__link {
+  min-width: 12rem;
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  text-decoration-line: underline;
+  color: #590d56;
+  align-self: flex-end;
+}
+.effects__description {
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  // margin-left: 16rem;
+  color: #000000;
+  width:37%;
+  min-height: 13.8rem;
+}
+.effects__icon {
+  position: absolute;
+  // // width: 9.5vw;
+  // // height: 9.5vw;
+  // border-radius: 50%;
+  // background-color: #590d56;
+  width: 13.4rem;
+  height: 13.4rem;
+  background-image: url('../images/effects-circle.svg');
+  background-repeat: no-repeat;
+  &_1 {
+    left: 14%;
+    top: 1.2rem;
+    &::before {
+      position: absolute;
+      width: 12.4rem;
+      height: 12.4rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      content: '';
+      background-image: url('../images/eff-1.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+  &_2 {
+    right: 0rem;
+    top: 3.3rem;
+    &::before {
+      position: absolute;
+      width: 13.45rem;
+      height: 13.45rem;
+      border-radius: 50%;
+      // transform: rotate(-2deg);
+      left: -3px;
+      top: -1px;
+      content: '';
+      background-image: url('../images/eff-3.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+    &:after {
+      position: absolute;
+      width: 13.45rem;
+      height: 13.45rem;
+      border-radius: 50%;
+      top: 11px;
+      left: 5px;
+      content: '';
+      background-image: url('../images/eff-31.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+  &_3 {
+    left: 6%;
+    top: -2.2rem;
+    &::before {
+      position: absolute;
+      width: 4.7rem;
+      height: 4.7rem;
+      border-radius: 50%;
+      border: 1px solid white;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      content: '';
+    }
+    &:after {
+      position: absolute;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      border: 1px solid white;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      content: '';
+    }
+
+  }
+  &_4 {
+    right: 5%;
+    bottom: -2.1rem;
+    &::before {
+      position: absolute;
+      width: 6.7rem;
+      height: 13.45rem;
+      border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+      right: 0%;
+      top: 0px;
+      content: '';
+      background-image: url('../images/eff-5.svg');
+      background-size: contain;
+      background-position: 17px 1px;
+      background-repeat: no-repeat;
+    }
+    &:after {
+      position: absolute;
+      width: 6.7rem;
+      height: 13.45rem;
+      border-radius: 100% 0 0 100%/ 50% 0 0 50%;
+      top: -0px;
+      left: 0px;
+      content: '';
+      background-image: url('../images/eff-51.svg');
+      background-size: contain;
+      background-position: -19px -0px;
+      background-repeat: no-repeat;
+    }
+  }
+  &_5 {
+    left: 14.5%;
+    bottom: -1.1rem;
+    &::before {
+      position: absolute;
+      width: 6.7rem;
+      height: 13.4rem;
+      border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+      right: 0%;
+      top: 0px;
+      content: '';
+      background-image: url('../images/eff-6.svg');
+      background-size: contain;
+      background-position: 0 center;
+      background-repeat: no-repeat;
+    }
+    &:after {
+      position: absolute;
+      width: 6.7rem;
+      height: 13.4rem;
+      border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+      left: 1px;
+      top: -1.56px;
+      content: '';
+      background-image: url('../images/eff-6.svg');
+      transform: rotate(180deg);
+      background-size: contain;
+      background-position: 0 center;
+      background-repeat: no-repeat;
+    }
+  }
+}
+

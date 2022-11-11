@@ -1,0 +1,143 @@
+@import "../imports.scss";
+.header__nav {
+  position: absolute;
+  top: 13.5rem;
+  width: 100%;
+  height: 100vh;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from($color-main-background),
+    to(#3c04347a)
+  );
+  background: -o-linear-gradient($color-main-background, #3c04347a);
+  background: linear-gradient($color-main-background, #3c04347a);
+  left: -140%;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 10000;
+}
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 8.4rem;
+  padding-top: 8.9rem;
+  padding-bottom: 14rem;
+  background-color: $color-main-background;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.nav__item {
+  position: relative;
+  z-index: 1000;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+  }
+}
+.nav__item:nth-child(1) {
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 31.1rem;
+    background-image: url("../images/large-wave.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 0;
+    bottom: -8.5rem;
+    -webkit-animation: move_wave 10s ease-in-out infinite;
+    animation: move_wave 10s ease-in-out infinite;
+  }
+}
+
+.nav__item:nth-child(2) {
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 18rem;
+    background-image: url("../images/small-wave.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 0;
+    bottom: -18.5rem;
+    -webkit-animation: move_wave 9s ease-in-out infinite;
+    animation: move_wave 9s ease-in-out infinite;
+  }
+}
+
+.nav__item:nth-child(3) {
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 17rem;
+    background-image: url("../images/middle-wave.svg");
+    background-position-x: -180deg;
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 0;
+    bottom: -17.6rem;
+    -webkit-animation: move_wave 7s linear infinite;
+    animation: move_wave 7s linear infinite;
+  }
+}
+
+.nav__item:nth-child(4) {
+  &::before {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 18rem;
+    background-image: url("../images/middle-wave.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 0;
+    bottom: -18.6rem;
+    -webkit-animation: move_wave 8s linear infinite;
+    animation: move_wave 8s linear infinite;
+  }
+}
+
+.nav__item:nth-child(5) {
+  &::before {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 13rem;
+    background-image: url("../images/small-wave.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 0;
+    bottom: -13.6rem;
+    -webkit-animation: move_wave 15s linear infinite;
+    animation: move_wave 15s linear infinite;
+  }
+}
+
+.nav__link {
+  font-family: "Merriweather", serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: black;
+  position: relative;
+  z-index: 1;
+  transition: 0.3s;
+  &:hover {
+    color: $color-purple-light;
+  }
+}
