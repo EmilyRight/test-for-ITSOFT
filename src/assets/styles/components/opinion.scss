@@ -1,0 +1,87 @@
+@import "../imports.scss";
+.opinion {
+  padding-top: 8.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+}
+.opinion_main {
+  max-width: 22%;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.opinion-slider {
+  width: 58vw;
+  height: 37vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.opinion-slider__item {
+  position: relative;
+  min-width: 100%;
+  min-height: 33vw;
+  position: relative;
+  // transition: 1s;
+}
+.opinion-slider__video {
+  width: 100%;
+  // transition: 1s;
+  // display: none;
+}
+.opinion__play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 8rem;
+  z-index: 1;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.476);
+}
+.opinion-slider-pagination {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+.opinion-slider-pagination__item {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 1px solid rgb(59, 12, 59);
+}
+.pagination__item_active {
+  background-color: rgb(59, 12, 59);
+}
+
+@keyframes fadeVideo {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadePagination {
+  0% {
+    background-color: none;
+  }
+
+  50% {
+    background-color: rgb(59, 12, 59);
+  }
+
+  100% {
+    background-color: rgba(59, 12, 59, 0.3);
+  }
+}

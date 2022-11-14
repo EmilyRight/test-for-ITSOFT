@@ -1,0 +1,165 @@
+@media screen and (max-width: 1199px) {
+  .description-content {
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    grid-template-rows: repeat(1fr, 7);
+  }
+
+  .description__title {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    max-width: none;
+    width: 100%;
+    padding-bottom: 0;
+  }
+
+  .slider {
+    position: relative;
+    width: 50rem;
+    height: 400px;
+    grid-row: 2/5;
+    justify-self: start;
+    align-self: start;
+    top: -1rem;
+    // margin-bottom: 12rem;
+  }
+  .slider__inner {
+    width: calc(50rem * 3 + 4rem);
+    gap: 6rem;
+    height: 100%;
+  }
+
+  .slider__item {
+    position: relative;
+    width: 50rem;
+    height: 100%;
+  }
+
+  .slider__item_1 {
+    background-image: url("../images/venarus_900-100-2.png");
+    background-repeat: no-repeat;
+    background-position: 0% 9.5rem;
+    background-size: 60rem auto;
+    &::before {
+      width: 45rem;
+      height: 100%;
+      background-size: 50rem auto;
+      background-position: -1rem 1.5rem;
+    }
+    &::after {
+      display: none;
+    }
+  }
+
+  .slider__item_1,
+  .slider__item_2 {
+    background-position: 30% 5.5rem;
+  }
+
+  .description__buttons {
+    grid-row: 5/6;
+  }
+  .description__ellipse-btn {
+    grid-row: 6/7;
+  }
+
+  .advantages .inner-container {
+    gap: 0px;
+  }
+  .instruction__item {
+    padding: 0;
+  }
+  .advantages__item {
+    justify-content: flex-start;
+    &:nth-child(1) {
+      justify-content: flex-start;
+      max-width: 30%;
+      gap: 1rem;
+    }
+    &:nth-child(2) {
+      max-width: 30%;
+      gap: 1rem;
+    }
+
+    &:nth-child(3) {
+      max-width: 30%;
+      gap: 1rem;
+      margin-left: 0rem;
+    }
+  }
+
+  .advantages__info-icon {
+    width: 2rem;
+    height: 2rem;
+    right: 0%;
+    bottom: 0;
+  }
+
+  .effects__icon_4 {
+    animation: rotate 6s ease infinite;
+  }
+  .effects__icon_5 {
+    left: 0%;
+    top: -2rem;
+  }
+
+  .production {
+    position: relative;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .production-content {
+    display: grid;
+    grid-template-columns: repeat(1fr, 2);
+    grid-template-rows: repeat(1fr, 3);
+    row-gap: 2rem;
+  }
+
+  .production__title {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    text-align: center;
+  }
+  .production-video-slider {
+    margin-top: 0.5rem;
+    width: 100%;
+    height: 30vw;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slider-item_active {
+    width: 40.5vw;
+    height: auto;
+  }
+
+  .production__buttons {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .production__ellipse-btn {
+    grid-column: 1/3;
+    grid-row: 3/4;
+    justify-self: center;
+    @include ellipse-button(#5b0e58);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

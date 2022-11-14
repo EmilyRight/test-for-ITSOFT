@@ -1,9 +1,9 @@
 @import "../imports.scss";
 .header__nav {
-  position: absolute;
+  position: fixed;
   top: 13.5rem;
   width: 100%;
-  height: 100vh;
+  min-height: 100%;
   background: -webkit-gradient(
     linear,
     left top,
@@ -13,11 +13,13 @@
   );
   background: -o-linear-gradient($color-main-background, #3c04347a);
   background: linear-gradient($color-main-background, #3c04347a);
+
   left: -140%;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  z-index: 10000;
+  z-index: 1000;
+  overflow: hidden;
 }
 .nav {
   display: -webkit-box;
@@ -54,6 +56,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     left: 0;
+    z-index: -1;
     bottom: -8.5rem;
     -webkit-animation: move_wave 10s ease-in-out infinite;
     animation: move_wave 10s ease-in-out infinite;

@@ -13,7 +13,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 0;
 }
 .header__logo {
   position: relative;
@@ -73,7 +73,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  z-index: 1;
+  z-index: 10;
 }
 .burger_pseudo {
   display: none;

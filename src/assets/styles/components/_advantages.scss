@@ -4,18 +4,17 @@
   padding-bottom: 10.8rem;
   display: flex;
   flex-direction: row;
-  gap: 10%;
   justify-content: space-between;
 }
 .advantages__item {
   position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   &:nth-child(1) {
     justify-content: space-between;
-    min-width: 20%;
+    max-width: 25%;
     gap: 3.3rem;
   }
   &:nth-child(2) {
@@ -24,7 +23,6 @@
   }
 
   &:nth-child(3) {
-    min-width: 30%;
     gap: 1rem;
     justify-content: center;
     margin-left: -2rem;
@@ -33,23 +31,30 @@
 }
 
 .advantages__icon_1 {
-  width: 9rem;
+ width: 9rem;
   height: 6.7rem;
   background-image: url('../images/adv-1.svg');
   background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+
 
 }
 .advantages__icon_2 {
   width: 6.8rem;
-  height: 5.8rem;
+  height: 5.9rem;
   background-image: url('../images/adv-2.svg');
   background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
 }
 .advantages__icon_3 {
-  width: 9rem;
+  width: 7rem;
   height: 5.8rem;
   background-image: url('../images/adv-3.svg');
   background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
 
 }
 
@@ -59,6 +64,7 @@
   height: 3rem;
   background-image: url('../images/info.svg');
   background-repeat: no-repeat;
+  background-size: contain;
   right: 0%;
   top: 1rem;
   cursor: pointer;

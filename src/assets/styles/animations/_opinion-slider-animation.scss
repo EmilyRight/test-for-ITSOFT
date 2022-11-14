@@ -1,0 +1,27 @@
+@keyframes fadeVideo {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadePagination {
+  0% {
+    background-color: none;
+  }
+
+  50% {
+    background-color: rgb(59, 12, 59);
+  }
+
+  100% {
+    background-color: rgba(59, 12, 59, 0.3);
+  }
+}

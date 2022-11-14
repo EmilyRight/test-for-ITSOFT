@@ -60,6 +60,13 @@ const config = {
         },
       },
       {
+        test: /\.mp4$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/video/[name][ext]',
+        },
+      },
+      {
         test: /\.(woff(2)?|ttf|eot)$/,
         type: 'asset/resource',
         generator: {
