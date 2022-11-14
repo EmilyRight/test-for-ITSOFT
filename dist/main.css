@@ -1328,6 +1328,8 @@ button {
   position: absolute;
   width: 9.5vw;
   height: 9.5vw;
+  max-width: 13.5rem;
+  max-height: 13.5rem;
   border-radius: 50%;
   background-color: #590d56;
 }
@@ -1339,6 +1341,8 @@ button {
   position: absolute;
   width: 9vw;
   height: 9vw;
+  max-width: 13rem;
+  max-height: 13rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -1356,6 +1360,8 @@ button {
   position: absolute;
   width: 9.5vw;
   height: 9.5vw;
+  max-width: 13.5rem;
+  max-height: 13.5rem;
   border-radius: 50%;
   left: -3px;
   top: -1px;
@@ -1369,6 +1375,8 @@ button {
   position: absolute;
   width: 9.5vw;
   height: 9.5vw;
+  max-width: 13.5rem;
+  max-height: 13.5rem;
   border-radius: 50%;
   top: 11px;
   left: 5px;
@@ -1412,6 +1420,8 @@ button {
   position: absolute;
   width: 5vw;
   height: 9.5vw;
+  max-width: 7rem;
+  max-height: 13.5rem;
   border-radius: 0 100% 100% 0/0 50% 50% 0;
   right: 0%;
   top: 0px;
@@ -1425,6 +1435,8 @@ button {
   position: absolute;
   width: 5vw;
   height: 9.5vw;
+  max-width: 7rem;
+  max-height: 13.5rem;
   border-radius: 100% 0 0 100%/50% 0 0 50%;
   top: 0px;
   left: 0px;
@@ -1442,6 +1454,8 @@ button {
   position: absolute;
   width: 4.9vw;
   height: 9.5vw;
+  max-width: 7rem;
+  max-height: 13.5rem;
   border-radius: 100% 0 0 100%/50% 0 0 50%;
   right: 0%;
   top: 0px;
@@ -1455,6 +1469,8 @@ button {
   position: absolute;
   width: 4.5vw;
   height: 9.5vw;
+  max-width: 7rem;
+  max-height: 13.5rem;
   border-radius: 0 100% 100% 0/0 50% 50% 0;
   left: 1px;
   top: -2px;
@@ -1782,7 +1798,9 @@ button {
 
 .opinion-slider {
   width: 58vw;
+  max-width: 75rem;
   height: 37vw;
+  max-height: 50rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1791,12 +1809,14 @@ button {
 .opinion-slider__item {
   position: relative;
   min-width: 100%;
-  min-height: 33vw;
+  height: 35vw;
+  max-height: 50rem;
   position: relative;
 }
 
 .opinion-slider__video {
   width: 100%;
+  height: 45rem;
 }
 
 .opinion__play-btn {
@@ -1829,34 +1849,6 @@ button {
   background-color: rgb(59, 12, 59);
 }
 
-@keyframes fadeVideo {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes fadePagination {
-  0% {
-    background-color: none;
-  }
-  50% {
-    background-color: rgb(59, 12, 59);
-  }
-  100% {
-    background-color: rgba(59, 12, 59, 0.3);
-  }
-}
-@media screen and (min-width: 1440px) {
-  .inner-container {
-    width: 1440px;
-    margin: 0 auto;
-  }
-}
 @media screen and (min-width: 1200px) and (max-width: 1439px) {
   .slider {
     width: 70rem;
