@@ -7,7 +7,7 @@ let isOpinionVideoPlayed = false;
 const opinionSliderContainer = document.querySelector('.opinion-slider');
 const sources = [
   './assets/video/sample-30s.mp4',
-  '../assets/video/sample-5s.mp4',
+  './assets/video/sample-5s.mp4',
   './assets/video/sample-30s.mp4',
 ];
 
