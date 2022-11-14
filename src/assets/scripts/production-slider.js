@@ -29,7 +29,8 @@ function moveVideoToLeft(movingWidth, container) {
   if (Math.abs(steps) !== 0) {
     steps += 1;
     container.style.left = `calc(${steps * (movingWidth + gap)}px)`;
-    inactiveSliderItem.classList.remove('slider-item_active');
+    activeSliderItem.classList.remove('slider-item_active');
+    inactiveSliderItem.classList.remove('slider-item_inactive');
     productionSliderItems[activeSliderItemIndex - 2].classList.add('slider-item_inactive');
     productionSliderItems[activeSliderItemIndex - 1].classList.add('slider-item_active');
     activeSliderItem = document.querySelector('.slider-item_active');
