@@ -1,3 +1,15 @@
+@mixin ellipse-button-small($color) {
+  width: 13.3rem;
+  max-height: 3.4rem;
+  padding: 1rem 2.5rem 1rem;
+  color: $color;
+  border: 1px solid $color;
+  border-radius: 3.35rem;
+  background-color: inherit;
+  font-size: 1.3rem;
+  transition: .3s;
+}
+
 @mixin ellipse-button($color) {
   width: 26.3rem;
   max-height: 6.7rem;
@@ -21,6 +33,19 @@
   display: flex;
   background-color: inherit;
   background-image: url('../images/arrow.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 1px solid $color;
+  border-radius: 50%;
+  transition: .3s;
+}
+
+@mixin round-button-small($color) {
+  width: 3.4rem;
+  height: 3.4rem;
+  display: flex;
+  background-color: inherit;
+  background-image: url('../images/arrow-purple.svg');
   background-repeat: no-repeat;
   background-position: center center;
   border: 1px solid $color;

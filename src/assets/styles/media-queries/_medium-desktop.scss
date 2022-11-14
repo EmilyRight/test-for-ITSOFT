@@ -1,0 +1,62 @@
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
+  .slider {
+    width: 70rem;
+    height: 400px;
+    grid-column-gap: 5rem;
+  }
+  .slider__inner {
+    width: calc(70rem * 3 - 2rem);
+    height: 100%;
+  }
+
+  .slider__item {
+    position: relative;
+    width: 70rem;
+    height: 100%;
+    background-position: 5rem 5.5rem;
+  }
+
+  .slider__item_1 {
+    background-image: url("../images/venarus_900-100-2.png");
+    background-repeat: no-repeat;
+    background-position: 7rem 5.5rem;
+    &::before {
+      width: 60rem;
+      height: 100%;
+      background-size: 60rem auto;
+      background-position: -6rem -2.5rem;
+
+    }
+  }
+
+
+  .advantages .inner-container {
+    gap: 0px;
+  }
+
+  .advantages__item {
+    justify-content: flex-start;
+    &:nth-child(1) {
+      justify-content: flex-start;
+      max-width: 30%;
+      gap: 1rem;
+    }
+    &:nth-child(2) {
+      max-width: 30%;
+      gap: 1rem;
+    }
+
+    &:nth-child(3) {
+      max-width: 30%;
+      gap: 1rem;
+      margin-left: 0rem;
+    }
+  }
+
+  .advantages__info-icon {
+    width: 2rem;
+    height: 2rem;
+    right: 0%;
+    bottom: 0;
+  }
+}

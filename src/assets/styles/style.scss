@@ -33,12 +33,30 @@ button {
   padding-right: 10.416666667%;
 }
 
+.h2__title {
+  @include h2-title;
+}
 
-
-
+.round-btn {
+  @include round-button(#fff);
+}
+.ellipse-btn {
+  @include ellipse-button(#fff);
+}
+.section-text {
+  @include section-text($color-grey-dark);
+}
 @import "./components/header";
 @import "./components/_nav";
 @import "./components/description";
 @import "./components/marquee";
 @import "./components/advantages";
 @import "./components/effects";
+@import "./components/production";
+@import "./components/opinion";
+
+@import "./media-queries/desktop";
+@import "./media-queries/medium-desktop";
+@import "./media-queries/small-desktop";
+@import "./media-queries/tablet";
+@import "./media-queries/mobile";
