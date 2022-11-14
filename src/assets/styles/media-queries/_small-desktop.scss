@@ -1,4 +1,7 @@
 @media screen and (max-width: 1199px) {
+  .h2__title {
+    font-size: 2.5rem;
+  }
   .description-content {
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
@@ -152,6 +155,8 @@
     justify-self: center;
     @include ellipse-button(#5b0e58);
   }
+
+
 }
 
 @keyframes rotate {
