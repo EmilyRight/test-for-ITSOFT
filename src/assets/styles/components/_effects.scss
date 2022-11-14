@@ -61,6 +61,9 @@
   position: absolute;
   width: 9.5vw;
   height: 9.5vw;
+  max-width: 13.5rem;
+  max-height: 13.5rem;
+
   border-radius: 50%;
   background-color: #590d56;
   // width: 13.4rem;
@@ -74,6 +77,8 @@
       position: absolute;
       width: 9vw;
       height: 9vw;
+      max-width: 13rem;
+      max-height: 13rem;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -91,6 +96,8 @@
       position: absolute;
       width: 9.5vw;
       height: 9.5vw;
+      max-width: 13.5rem;
+      max-height: 13.5rem;
       border-radius: 50%;
       // transform: rotate(-2deg);
       left: -3px;
@@ -105,6 +112,8 @@
       position: absolute;
       width: 9.5vw;
   height: 9.5vw;
+  max-width: 13.5rem;
+  max-height: 13.5rem;
       border-radius: 50%;
       top: 11px;
       left: 5px;
@@ -149,6 +158,8 @@
       position: absolute;
       width: 5vw;
       height: 9.5vw;
+      max-width: 7rem;
+      max-height: 13.5rem;
       border-radius: 0 100% 100% 0 / 0 50% 50% 0;
       right: 0%;
       top: 0px;
@@ -162,6 +173,8 @@
       position: absolute;
       width: 5vw;
       height: 9.5vw;
+      max-width: 7rem;
+      max-height: 13.5rem;
       border-radius: 100% 0 0 100%/ 50% 0 0 50%;
       top: -0px;
       left: 0px;
@@ -179,6 +192,8 @@
       position: absolute;
       width: 4.9vw;
       height: 9.5vw;
+      max-width: 7rem;
+      max-height: 13.5rem;
       border-radius: 100% 0 0 100%/ 50% 0 0 50%;
       right: 0%;
       top: 0px;
@@ -192,6 +207,8 @@
       position: absolute;
       width: 4.5vw;
       height: 9.5vw;
+      max-width: 7rem;
+      max-height: 13.5rem;
       border-radius: 0 100% 100% 0 / 0 50% 50% 0;
       left: 1px;
       top: -2px;
