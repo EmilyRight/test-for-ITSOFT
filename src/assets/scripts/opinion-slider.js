@@ -8,13 +8,13 @@ let isAutoPlay = true;
 let sliders;
 let currentVideoIndex = 0;
 const frames = paginationList.length;
-const sources = [
+export const sources = [
   './assets/video/sample-30s.mp4',
   './assets/video/sample-5s.mp4',
   './assets/video/sample-30s_copy.mp4',
 ];
 
-function findIndex() {
+export function findIndex() {
   const paths = [];
   sources.forEach((el) => paths.push(`http://localhost:3000/${el.slice(2)}`));
   return (paths);

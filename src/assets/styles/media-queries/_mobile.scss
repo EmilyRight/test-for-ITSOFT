@@ -71,12 +71,12 @@
   }
 
   .icon-dash__search-icon {
-    height: 2.4rem;
-    width: 2rem;
+    height: 2.6rem;
+    width: 2.5rem;
   }
   .icon-dash__map-icon {
-    height: 2em;
-    width: 2.4rem;
+    height: 2.2em;
+    width: 2.5rem;
     border: none;
   }
 
@@ -112,7 +112,7 @@
     content: "";
     border: none;
     background-color: inherit;
-    height: 0.7rem;
+    height: 0.65rem;
     width: 3.3rem;
     background-image: url("../images/burger.svg");
     background-repeat: no-repeat;
@@ -435,4 +435,20 @@
     align-items: center;
     gap: 1rem;
   }
+
+  .pop-up__item {
+    max-width: 80vw;
+  }
+
+  .pop-up__video {
+    max-width: 80vw;
+  }
+
+  .close-btn {
+    width: 3rem;
+    height: 3rem;
+    top: -4rem;
+    right: -1rem;;
+  }
+
 }
