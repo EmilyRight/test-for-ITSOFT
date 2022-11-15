@@ -25,18 +25,20 @@
       height: 100%;
       background-size: 60rem auto;
       background-position: -6rem -2.5rem;
-
     }
   }
-
 
   .advantages .inner-container {
     gap: 0px;
   }
 
   .advantages__item {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
     &:nth-child(1) {
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
       justify-content: flex-start;
       max-width: 30%;
       gap: 1rem;

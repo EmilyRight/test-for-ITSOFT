@@ -2,17 +2,35 @@
 .advantages {
   padding-top: 10.2rem;
   padding-bottom: 10.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 .advantages__item {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   &:nth-child(1) {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     max-width: 25%;
     gap: 3.3rem;
@@ -24,26 +42,25 @@
 
   &:nth-child(3) {
     gap: 1rem;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin-left: -2rem;
-
   }
 }
 
 .advantages__icon_1 {
- width: 9rem;
+  width: 9rem;
   height: 6.7rem;
-  background-image: url('../images/adv-1.svg');
+  background-image: url("../images/adv-1.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
-
-
 }
 .advantages__icon_2 {
   width: 6.8rem;
   height: 5.9rem;
-  background-image: url('../images/adv-2.svg');
+  background-image: url("../images/adv-2.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
@@ -51,18 +68,17 @@
 .advantages__icon_3 {
   width: 7rem;
   height: 5.8rem;
-  background-image: url('../images/adv-3.svg');
+  background-image: url("../images/adv-3.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
-
 }
 
 .advantages__info-icon {
   position: relative;
   width: 3rem;
   height: 3rem;
-  background-image: url('../images/info.svg');
+  background-image: url("../images/info.svg");
   background-repeat: no-repeat;
   background-size: contain;
   right: 0%;
@@ -71,7 +87,7 @@
 }
 .advantages__text {
   color: #242424;
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 154.8%;

@@ -12,25 +12,40 @@
   z-index: -1;
 }
 .production-content {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
   grid-template-columns: repeat(1fr, 3);
+  -ms-grid-rows: 1fr 1fr;
   grid-template-rows: repeat(1fr, 2);
   row-gap: 3.5rem;
+  -webkit-column-gap: 2.5rem;
+  -moz-column-gap: 2.5rem;
   column-gap: 2.5rem;
+}
+.production-content > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
 }
 
 .production__title {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
   grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
   grid-row: 1/2;
 }
 
 .production-video-slider {
   margin-top: 0.5rem;
-
   min-width: 52.2vw;
   height: 19vw;
-  // height: 28rem;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
   grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
   grid-row: 1/2;
   position: relative;
   overflow: hidden;
@@ -39,14 +54,22 @@
   height: 100%;
   position: absolute;
   z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 2vw;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 .production-video-slider__item {
   width: 18vw;
   height: 10.5vw;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
   position: relative;
 }
@@ -68,25 +91,43 @@
 .slider-item_active {
   width: 32.2vw;
   height: auto;
-  // height: 28rem;
-  // transform: scale(1.76) translateX(5.5rem);
 }
 .production__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
   grid-column: 3/4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
   grid-row: 1/2;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   gap: 2.7rem;
 }
 
 .production__btn_right {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
 .production__ellipse-btn {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-column: 1/4;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
   grid-row: 2/3;
+  -ms-grid-column-align: end;
   justify-self: end;
 }
