@@ -1651,6 +1651,58 @@ button {
   padding-bottom: 12.6rem;
 }
 
+.production__pop-up {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(77, 37, 71, 0.663);
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  display: none;
+}
+
+.pop-up__item {
+  position: absolute;
+  max-width: 50vw;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.pop-up__video {
+  max-width: 50vw;
+}
+
+.close-btn {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  top: -4rem;
+  right: -3rem;
+  z-index: 3;
+}
+
+.close-btn_1 {
+  top: 1.3rem;
+  left: -7px;
+  position: absolute;
+  width: 4rem;
+  height: 1.5px;
+  background-color: #fff;
+  transform: rotate(45deg);
+}
+
+.close-btn_2 {
+  top: 1.3rem;
+  left: -7px;
+  position: absolute;
+  width: 4rem;
+  height: 1.5px;
+  background-color: #fff;
+  transform: rotate(-45deg);
+}
+
 .wave-static__img {
   width: 100%;
   position: absolute;
@@ -1743,6 +1795,7 @@ button {
 .slider-item_active {
   width: 32.2vw;
   height: auto;
+  filter: blur(0px);
 }
 
 .production__buttons {
@@ -3451,6 +3504,12 @@ button {
     flex-wrap: wrap;
     gap: 1rem;
   }
+  .pop-up__item {
+    max-width: 70vw;
+  }
+  .pop-up__video {
+    max-width: 70vw;
+  }
 }
 @media screen and (max-width: 767px) {
   .header__nav {
@@ -3516,12 +3575,12 @@ button {
     gap: 1.2rem;
   }
   .icon-dash__search-icon {
-    height: 2.4rem;
-    width: 2rem;
+    height: 2.6rem;
+    width: 2.5rem;
   }
   .icon-dash__map-icon {
-    height: 2em;
-    width: 2.4rem;
+    height: 2.2em;
+    width: 2.5rem;
     border: none;
   }
   .burger__icon {
@@ -3554,7 +3613,7 @@ button {
     content: "";
     border: none;
     background-color: inherit;
-    height: 0.7rem;
+    height: 0.65rem;
     width: 3.3rem;
     background-image: url(assets/images/burger.svg);
     background-repeat: no-repeat;
@@ -3887,5 +3946,17 @@ button {
     -ms-flex-align: center;
     align-items: center;
     gap: 1rem;
+  }
+  .pop-up__item {
+    max-width: 80vw;
+  }
+  .pop-up__video {
+    max-width: 80vw;
+  }
+  .close-btn {
+    width: 3rem;
+    height: 3rem;
+    top: -4rem;
+    right: -1rem;
   }
 }

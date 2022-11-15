@@ -11,6 +11,11 @@ const movingLeftOffset = document.querySelector('.slider-item_active').clientWid
 const productionSliderItemsLength = productionSliderItems.length;
 const playBtn = document.querySelectorAll('.play-btn');
 const videoList = document.querySelectorAll('.slider-item__video');
+
+const popup = document.querySelector('.production__pop-up');
+const popupVideo = document.querySelector('.pop-up__video');
+const closeBtn = document.querySelector('.close-btn');
+
 let isVideoPlayed = false;
 let steps = 0;
 
@@ -61,14 +66,20 @@ function moveVideoToRight(movingWidth, container) {
   }
 }
 
+function closePopUp() {
+  popupVideo.pause();
+  popup.style.display = 'none';
+  isVideoPlayed = false;
+}
 function playVideo(event) {
   const pressedButton = event.target;
   const btnIndex = Array.from(playBtn).indexOf(pressedButton);
-  const currentVideo = videoList[btnIndex];
+  const currentVideoSrc = videoList[btnIndex].src.replace(/(http:\/\/localhost:3000\/)/, '');
   if (!isVideoPlayed) {
-    currentVideo.play();
+    popup.style.display = 'block';
+    popupVideo.src = `${currentVideoSrc}`;
+    popupVideo.play();
     isVideoPlayed = true;
-    pressedButton.style.display = 'none';
   }
 }
 
@@ -85,3 +96,4 @@ productionSliderBtnLeft.addEventListener('click', () => { moveVideoToLeft(moving
 productionSliderBtnRight.addEventListener('click', () => { moveVideoToRight(movingRightOffset, productionSliderContainer); });
 playBtn.forEach((btn) => btn.addEventListener('click', playVideo));
 videoList.forEach((video) => video.addEventListener('click', pauseVideo));
+closeBtn.addEventListener('click', closePopUp);
