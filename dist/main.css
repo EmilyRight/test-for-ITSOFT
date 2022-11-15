@@ -3531,7 +3531,7 @@ button {
   }
   .burger,
   .burger_pseudo {
-    height: 0.6rem;
+    height: 0.8rem;
     width: 3.3rem;
     background-image: url(assets/images/burger-small.svg);
     background-size: cover;
@@ -3541,7 +3541,7 @@ button {
     content: "";
     border: none;
     background-color: inherit;
-    height: 0.6rem;
+    height: 0.8rem;
     width: 3.3rem;
     background-image: url(assets/images/burger-small.svg);
     background-repeat: no-repeat;
@@ -3554,7 +3554,7 @@ button {
     content: "";
     border: none;
     background-color: inherit;
-    height: 0.6rem;
+    height: 0.7rem;
     width: 3.3rem;
     background-image: url(assets/images/burger.svg);
     background-repeat: no-repeat;
