@@ -1,8 +1,20 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import "../imports.scss";
 .effects {
   padding-top: 2rem;
   padding-bottom: 15rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   gap: 6.5rem;
 }
@@ -27,7 +39,11 @@
   padding-bottom: 3.4rem;
   width: 100%;
   border-bottom: 1px solid $color-purple-dark;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: start;
   gap: 20%;
   position: relative;
@@ -41,8 +57,10 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
+  -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
   color: #590d56;
+  -ms-flex-item-align: end;
   align-self: flex-end;
 }
 .effects__description {
@@ -50,11 +68,14 @@
   font-weight: 300;
   font-size: 30px;
   line-height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-  // margin-left: 16rem;
   color: #000000;
-  width:37%;
+  width: 37%;
   min-height: 13.8rem;
 }
 .effects__icon {
@@ -63,13 +84,8 @@
   height: 9.5vw;
   max-width: 13.5rem;
   max-height: 13.5rem;
-
   border-radius: 50%;
   background-color: #590d56;
-  // width: 13.4rem;
-  // height: 13.4rem;
-  // background-image: url('../images/effects-circle.svg');
-  // background-repeat: no-repeat;
   &_1 {
     left: 14%;
     top: 1.2rem;
@@ -81,9 +97,11 @@
       max-height: 13rem;
       top: 50%;
       left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
-      content: '';
-      background-image: url('../images/eff-1.svg');
+      content: "";
+      background-image: url("../images/eff-1.svg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
@@ -99,11 +117,10 @@
       max-width: 13.5rem;
       max-height: 13.5rem;
       border-radius: 50%;
-      // transform: rotate(-2deg);
       left: -3px;
       top: -1px;
-      content: '';
-      background-image: url('../images/eff-3.svg');
+      content: "";
+      background-image: url("../images/eff-3.svg");
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center center;
@@ -111,14 +128,14 @@
     &:after {
       position: absolute;
       width: 9.5vw;
-  height: 9.5vw;
-  max-width: 13.5rem;
-  max-height: 13.5rem;
+      height: 9.5vw;
+      max-width: 13.5rem;
+      max-height: 13.5rem;
       border-radius: 50%;
       top: 11px;
       left: 5px;
-      content: '';
-      background-image: url('../images/eff-31.svg');
+      content: "";
+      background-image: url("../images/eff-31.svg");
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center center;
@@ -135,8 +152,10 @@
       border: 1px solid white;
       top: 50%;
       left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
-      content: '';
+      content: "";
     }
     &:after {
       position: absolute;
@@ -146,10 +165,11 @@
       border: 1px solid white;
       top: 50%;
       left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
-      content: '';
+      content: "";
     }
-
   }
   &_4 {
     right: 5%;
@@ -163,8 +183,8 @@
       border-radius: 0 100% 100% 0 / 0 50% 50% 0;
       right: 0%;
       top: 0px;
-      content: '';
-      background-image: url('../images/eff-5.svg');
+      content: "";
+      background-image: url("../images/eff-5.svg");
       background-size: contain;
       background-position: 17px 1px;
       background-repeat: no-repeat;
@@ -178,8 +198,8 @@
       border-radius: 100% 0 0 100%/ 50% 0 0 50%;
       top: -0px;
       left: 0px;
-      content: '';
-      background-image: url('../images/eff-51.svg');
+      content: "";
+      background-image: url("../images/eff-51.svg");
       background-size: contain;
       background-position: -19px -0px;
       background-repeat: no-repeat;
@@ -197,8 +217,8 @@
       border-radius: 100% 0 0 100%/ 50% 0 0 50%;
       right: 0%;
       top: 0px;
-      content: '';
-      background-image: url('../images/eff-6.svg');
+      content: "";
+      background-image: url("../images/eff-6.svg");
       background-size: contain;
       background-position: 0 center;
       background-repeat: no-repeat;
@@ -212,8 +232,10 @@
       border-radius: 0 100% 100% 0 / 0 50% 50% 0;
       left: 1px;
       top: -2px;
-      content: '';
-      background-image: url('../images/eff-6.svg');
+      content: "";
+      background-image: url("../images/eff-6.svg");
+      -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
       transform: rotate(180deg);
       background-size: contain;
       background-position: 0 center;
@@ -221,4 +243,3 @@
     }
   }
 }
-

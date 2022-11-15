@@ -59,6 +59,7 @@
     display: grid;
     -ms-grid-columns: 1fr 13.2rem 1fr;
     grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(1fr, 4);
     row-gap: 1rem;
     position: relative;
@@ -122,7 +123,11 @@
 
   .description__title {
     font-size: 4.5rem;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
     grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
     grid-row: 1/2;
     padding-bottom: 0;
     line-height: 90%;
@@ -135,9 +140,12 @@
   }
 
   .slider {
-    // position: absolute;
     position: relative;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
     grid-column: 1/2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
     grid-row: 2/3;
     width: 100%;
     height: 210px;
@@ -181,7 +189,11 @@
   }
 
   .description__ellipse-btn {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
     grid-column: 1/2;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
     grid-row: 4/5;
     color: #5b0e58;
     border: 1px solid #5b0e58;
@@ -189,7 +201,11 @@
   }
 
   .description__buttons {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
     grid-column: 1/2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
     grid-row: 3/4;
     gap: 1.7rem;
   }
@@ -211,6 +227,7 @@
     grid-row: 4/5;
     -ms-grid-row-align: start;
     align-self: start;
+    -ms-grid-column-align: center;
     justify-self: center;
     &:hover {
       @include ellipse-button-hover(#fff);
@@ -220,19 +237,35 @@
   .advantages {
     padding-top: 5.2rem;
     padding-bottom: 5.2rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 3rem;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
 
   .advantages__item {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     text-align: center;
     &:nth-child(1) {
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
       justify-content: space-between;
       min-width: 100%;
       gap: 1rem;
@@ -245,6 +278,8 @@
     &:nth-child(3) {
       min-width: 100%;
       gap: 1rem;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
       margin-left: 0rem;
     }
@@ -261,12 +296,10 @@
   .effects__icon_2 {
     right: 15%;
     top: 1.1rem;
-
   }
   .effects__icon_4 {
     right: 15%;
     top: 1.1rem;
-
   }
   .wave-static__img {
     top: -0rem;
@@ -279,12 +312,18 @@
   }
 
   .production-content {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(1fr, 4);
     row-gap: 2rem;
   }
 
+  .production-content > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
 
   .production-video-slider__item {
     width: 20vw;
@@ -293,8 +332,6 @@
   .slider-item_active {
     width: 67.5vw;
     height: auto;
-    // height: 28rem;
-    // transform: scale(1.76) translateX(5.5rem);
   }
 
   .opinion-slider {
@@ -305,10 +342,8 @@
     min-width: 100%;
     min-height: 50.625vw;
     position: relative;
-    // transition: 1s;
   }
   .opinion-slider__video {
     min-height: 51vw;
   }
-
 }
