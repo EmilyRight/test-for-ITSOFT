@@ -1,0 +1,98 @@
+@import "../imports.scss";
+.purchase {
+  padding-top: 15.5rem;
+  padding-bottom: 9.1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.purchase__title {
+  max-width: 21%;
+}
+
+.purchase-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.purchase__image {
+  height: 41rem;
+  width: 59vw;
+  background-image: url(../images/venarus_900-100-2.png);
+  background-repeat: no-repeat;
+  background-position: 0 2rem;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    top: -9rem;
+    right: 3rem;
+    height: 41rem;
+    width: 35vw;
+    background-image: url(../images/venarus_900-100-2.png);
+    background-repeat: no-repeat;
+    background-position: 54% 2rem;
+    z-index: -1;
+  }
+}
+.purchase__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.purchase__ellipse-btn {
+  @include ellipse-button(#47093e);
+  &:hover {
+    background-color: #47093e;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .purchase__image {
+    height: 41rem;
+    width: 57vw;
+    background-position: 70% 2rem;
+    &::after {
+      top: -9rem;
+      right: -2rem;
+      width: 40vw;
+      background-position: 50% 2rem;
+      z-index: -1;
+    }
+  }
+  .purchase__btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .purchase__ellipse-btn {
+    &:hover {
+      background-color: #47093e;
+      color: white;
+    }
+  }
+}
+
+
+

@@ -46,6 +46,10 @@ button {
 .section-text {
   @include section-text($color-grey-dark);
 }
+.section-main-text {
+  @include section-main-text;
+}
+
 @import "./components/header";
 @import "./components/_nav";
 @import "./components/description";
@@ -54,7 +58,11 @@ button {
 @import "./components/effects";
 @import "./components/production";
 @import "./components/opinion";
+@import "./components/info";
+@import "./components/purchase";
+@import './components/footer';
 
+@import "./media-queries/desktop";
 @import "./media-queries/medium-desktop";
 @import "./media-queries/small-desktop";
 @import "./media-queries/tablet";

@@ -75,3 +75,15 @@
   line-height: 154.8%;
   color: $color;
 }
+
+@mixin section-main-text {
+  max-width: 22%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 3.2rem;
+}
