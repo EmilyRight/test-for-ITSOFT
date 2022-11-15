@@ -14,7 +14,7 @@ const videoList = document.querySelectorAll('.slider-item__video');
 let isVideoPlayed = false;
 let steps = 0;
 
-function findGap(movingOffset) {
+export default function findGap(movingOffset) {
   const activeItemOffset = document.querySelector('.slider-item_active').clientWidth;
   const gap = productionSlider.clientWidth - movingOffset - activeItemOffset;
   return gap;

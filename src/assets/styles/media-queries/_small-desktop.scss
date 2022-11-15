@@ -204,3 +204,35 @@
     @include ellipse-button(#5b0e58);
   }
 }
+
+@media screen and (max-width: 1199px) {
+  .purchase__image {
+    height: 41rem;
+    width: 57vw;
+    background-position: 70% 2rem;
+    &::after {
+      top: -9rem;
+      right: -2rem;
+      width: 40vw;
+      background-position: 50% 2rem;
+      z-index: -1;
+    }
+  }
+  .purchase__btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .purchase__ellipse-btn {
+    &:hover {
+      background-color: #47093e;
+      color: white;
+    }
+  }
+}

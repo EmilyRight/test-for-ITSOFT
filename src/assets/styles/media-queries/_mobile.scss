@@ -156,6 +156,7 @@
 
   .slider__inner {
     width: calc(100% * 3 + 4rem);
+    column-gap: 2rem;
   }
   .slider__item {
     position: relative;
@@ -333,7 +334,9 @@
     width: 67.5vw;
     height: auto;
   }
-
+  .opinion {
+    padding-bottom: 2rem;
+  }
   .opinion-slider {
     height: 60vw;
   }
@@ -345,5 +348,91 @@
   }
   .opinion-slider__video {
     min-height: 51vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .info__links {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto auto auto;
+    row-gap: 1.5rem;
+  }
+
+  .info__link_1 {
+    height: 26.3rem;
+    width: 26.3rem;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .info__link_2 {
+    height: 26.3rem;
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .info__link_3 {
+    height: 26.3rem;
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  .info__link_4 {
+    display: none;
+  }
+  .info__ellipse-btn {
+    @include ellipse-button-small(#47093E);
+    grid-column: 1/2;
+    grid-row: 4/5;
+    justify-self: center;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .purchase__image {
+    height: 40rem;
+    min-width: 30rem;
+    width: 100%;
+    background-size: cover;
+    &::after {
+      width: 65vw;
+    }
+  }
+  .purchase__ellipse-btn {
+    @include ellipse-button-small(#47093e);
+    &:hover {
+      background-color: #47093e;
+      color: white;
+    }
+  }
+}
+
+@media screen and (max-width: 541px) {
+  .purchase__image {
+    height: 25rem;
+    min-width: 30rem;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    &::after {
+      display: none;
+    }
+  }
+  .purchase__btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 1rem;
   }
 }

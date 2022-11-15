@@ -1,6 +1,7 @@
 @import "../imports.scss";
 .opinion {
   padding-top: 8.5rem;
+  padding-bottom: 8.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8,25 +9,16 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
+  justify-content: space-between;
   gap: 4rem;
 }
-.opinion_main {
-  max-width: 22%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 3.2rem;
-}
+
 
 .opinion-slider {
-  width: 58vw;
-  max-width: 75rem;
-  height: 37vw;
-  max-height: 50rem;
+  width: 78vw;
+  max-width: 85rem;
+  height: 45vw;
+  max-height: 55rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,7 +34,7 @@
 .opinion-slider__item {
   position: relative;
   min-width: 100%;
-  height: 35vw;
+  height: 34vw;
   max-height: 50rem;
   position: relative;
 }
