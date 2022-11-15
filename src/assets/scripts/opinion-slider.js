@@ -4,12 +4,21 @@ const paginationList = document.querySelectorAll('.opinion-slider-pagination__it
 const currentVideo = document.querySelector('.opinion-slider__video');
 const opinionPlayBtn = document.querySelector('.opinion__play-btn');
 let isOpinionVideoPlayed = false;
-const opinionSliderContainer = document.querySelector('.opinion-slider');
+let isAutoPlay = true;
+let sliders;
+let currentVideoIndex = 0;
+const frames = paginationList.length;
 const sources = [
   './assets/video/sample-30s.mp4',
   './assets/video/sample-5s.mp4',
-  './assets/video/sample-30s.mp4',
+  './assets/video/sample-30s_copy.mp4',
 ];
+
+function findIndex() {
+  const paths = [];
+  sources.forEach((el) => paths.push(`http://localhost:3000/${el.slice(2)}`));
+  return (paths);
+}
 
 function setActive(array) {
   array.forEach((el) => {
@@ -19,53 +28,84 @@ function setActive(array) {
     }
   });
 }
-let i = 0;
-const frames = paginationList.length;
-const autoPlay = setInterval(() => {
-  if (!isOpinionVideoPlayed) {
-    setActive(Array.from(paginationList));
-    paginationList[i].classList.add('pagination__item_active');
-    paginationList[i].style.animation = 'fadePagination ease-in-out 4s infinite';
-    console.log(paginationList[i].style.animation);
-    currentVideo.src = sources[i];
-    currentVideo.style.animation = 'fadeVideo ease-in-out 4s infinite';
-    i += 1;
-    if (i === frames) {
-      i = 0;
+
+function autoPlay() {
+  sliders = setInterval(() => {
+    if (isAutoPlay) {
+      setActive(Array.from(paginationList));
+      paginationList[currentVideoIndex].classList.add('pagination__item_active');
+      paginationList[currentVideoIndex].style.animation = 'fadePagination ease-in-out 4s infinite';
+      currentVideo.src = sources[currentVideoIndex];
+      currentVideo.style.animation = 'fadeVideo ease-in-out 4s infinite';
+      currentVideoIndex += 1;
+      if (currentVideoIndex === frames) {
+        currentVideoIndex = 0;
+      }
     }
+    paginationList[currentVideoIndex].style.animation = 'none';
+    currentVideo.style.animation = 'none';
+  }, 4000);
+}
+
+function showPlayBtn() {
+  const btn = currentVideo.nextElementSibling;
+  if (!isOpinionVideoPlayed) {
+    btn.style.display = 'block';
   } else {
-    autoPlay.clearInterval();
+    btn.style.display = 'none';
   }
-}, 4000);
+}
 
 function setNewVideo(event) {
+  isOpinionVideoPlayed = false;
+  isAutoPlay = false;
+  clearInterval(sliders);
   const paginationItem = event.target;
   const paginationItemIndex = Array.from(paginationList).indexOf(paginationItem);
   setActive(Array.from(paginationList));
   paginationItem.classList.add('pagination__item_active');
+  paginationItem.style.animation = 'none';
   currentVideo.style.animation = 'none';
+  currentVideo.pause();
   currentVideo.src = sources[paginationItemIndex];
-  // currentVideo.style.opacity = '1';
+  showPlayBtn();
 }
 
-function playOpinionVideo(event) {
-  const playButton = event.target;
+function playOpinionVideo() {
+  const fullPaths = findIndex();
+  const paginationItemIndex = fullPaths.indexOf(currentVideo.src);
+  const paginationItem = paginationList[paginationItemIndex];
+  isAutoPlay = false;
   if (!isOpinionVideoPlayed) {
-    currentVideo.play();
     isOpinionVideoPlayed = true;
-    playButton.style.display = 'none';
+    currentVideo.play();
+    paginationItem.style.animation = 'none';
+    showPlayBtn();
   }
 }
 
 function pauseOpinionVideo() {
-  const play = currentVideo.nextElementSibling;
+  isAutoPlay = true;
   if (isOpinionVideoPlayed) {
     currentVideo.pause();
-    play.style.display = 'block';
     isOpinionVideoPlayed = false;
+    showPlayBtn();
+    clearInterval(sliders);
+    autoPlay();
   }
 }
 
 paginationList.forEach((btn) => btn.addEventListener('click', setNewVideo));
 opinionPlayBtn.addEventListener('click', playOpinionVideo);
 currentVideo.addEventListener('click', pauseOpinionVideo);
+currentVideo.addEventListener('ended', () => {
+  clearInterval(sliders);
+  isOpinionVideoPlayed = false;
+  isAutoPlay = true;
+  showPlayBtn(currentVideo);
+  autoPlay();
+});
+
+window.onload = function () {
+  autoPlay();
+};
