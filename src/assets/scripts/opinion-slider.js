@@ -78,9 +78,9 @@ function playOpinionVideo() {
   isAutoPlay = false;
   if (!isOpinionVideoPlayed) {
     isOpinionVideoPlayed = true;
+    showPlayBtn();
     currentVideo.play();
     paginationItem.style.animation = 'none';
-    showPlayBtn();
   }
 }
 
